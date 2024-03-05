@@ -1,4 +1,4 @@
-Livro
-"""O Hobbit"", Autor"
-"""Orgulho e Preconceito"", Autor"
-"""1984"", Autor"
+Título,Autor,Ano de Publicação,Gênero
+"Livro: ""O Hobbit""","Autor: ""J.R.R. Tolkien""",Ano de Publicação: 1937,"Gênero: ""Fantasia"""
+"Livro: ""Orgulho e Preconceito""","Autor: ""Jane Austen""",Ano de Publicação: 1813,"Gênero: ""Romance"""
+"Livro: ""1984""","Autor: ""George Orwell""",Ano de Publicação: 1949,"Gênero: ""Ficção Científica"""

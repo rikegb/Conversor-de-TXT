@@ -7,24 +7,17 @@ def converter_formatos(caminho_arquivo_txt):
     with open(caminho_arquivo_txt, 'r') as file:
         linhas = file.readlines()
 
-    # Inicializar a variável de ano
-    ano = None
-
     # Extrair os dados do arquivo
     livros = []
     for linha in linhas:
-        partes = linha.strip().split(": ")
-        if partes[0] == "Ano de Publicação":
-            ano = int(partes[1])
-        else:
-            livro = {
-                partes[0]: partes[1]
-            }
-            livros.append(livro)
-
-    # Adicionar o ano aos dados do livro
-    if ano is not None:
-        livros[-1]["Ano de Publicação"] = ano
+        partes = linha.strip().split(", ")
+        livro = {
+            "Título": partes[0],
+            "Autor": partes[1],
+            "Ano de Publicação": partes[2],
+            "Gênero": partes[3]
+        }
+        livros.append(livro)
 
     # Converter para JSON
     with open('livros.json', 'w') as json_file:
